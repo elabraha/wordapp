@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="static/style.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<title>Word Fun!</title>
+</head>
+<body class="container-fluid">
+	<div class="container" id="wholething">
+		<div class="col-md-8 col-md-offset-2 centered">
+			<header id="top" class="header">
+
+					<h1 style="color:black;font-size:60px" >This is Word Fun!</h1>
+					<div class="col-md-8 col-md-offset-2">
+						<h4>Enter your sentence here, then press the enter key. If javascript is disabled a form will be submitted and the page will reload. If not javascript will display the changed sentence immediately.</h3>
+					</div>	
+			<header>
+			<br>
+			<div class ="centered col-md-offset-2 col-xs-12 col-sm-6 col-md-8">
+				<form name="submitForm" action="" method="post" onsubmit="return false;" >
+					<div class="form-group">
+						<input class="form-control"  type="text" name="sentence" onkeyup="return changeLetters()">
+					</div>
+					<div class="form-group">
+						<input  type="submit" style="display: none;">
+					</div>
+				</form>
+			</div>
+		</div>
+		<script type="text/javascript" src="static/js/app.js"></script>
+		<div class="col-md-8 col-md-offset-2 centered">
+			{% if sentence %}
+				<p id="display1">{{ sentence }}</p>
+			{% endif %}
+			<p id="display"></p>
+		</div>
+	</div>
+</body>
+</div>
+<footer>
+	<p>Written by: Eliana Abraham</p>
+	<p>Contact information: <a href="mailto:elianaabraham93@gmail.com">
+	elianaabraham93@gmail.com</a>.</p>
+</footer>
+</html>
